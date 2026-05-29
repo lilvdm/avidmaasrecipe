@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Recipe</title>
+    <p class="name">Avidmaa 2022810096</p>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="recipe-page">
+        <h2>Your Recipe:</h2>
+
+        <div class="recipe-box">
+            {{ recipe | safe }}
+        </div>
+
+        <a href="/">Generate another recipe</a>
+    </div>
+</body>
+</html>

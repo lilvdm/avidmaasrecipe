@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.name {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.subheading {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+select#cuisine {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.checkbox-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 95%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.checkbox-group {
+    flex: 0 0 calc(50% - 5px);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label {
+    display: inline-block;
+    font-size: 13px;
+}
+
+select#language {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.recipe-page {
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.recipe-page h2 {
+    color: #35a853;
+    text-align: left;
+    border-bottom: 2px solid #35a853;
+    padding-bottom: 15px;
+}
+
+.recipe-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
