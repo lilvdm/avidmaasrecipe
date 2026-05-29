@@ -1,21 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Recipe Generator</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+{% extends "base.html" %}
 
-<body>
-    <h2>Input 3 Ingredients</h2>
+{% block content %}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-2">Input 3 Ingredients</h2>
     <p class="name">Avidmaa 2022810096</p>
 
     <form action="/generate_recipe" method="post">
-        <input type="text" name="ingredient" placeholder="Ingredient 1" required>
-        <input type="text" name="ingredient" placeholder="Ingredient 2" required>
-        <input type="text" name="ingredient" placeholder="Ingredient 3" required>
+        <input
+            type="text"
+            name="ingredient"
+            placeholder="Ingredient 1"
+            required
+            class="form-control mb-3"
+        >
+
+        <input
+            type="text"
+            name="ingredient"
+            placeholder="Ingredient 2"
+            required
+            class="form-control mb-3"
+        >
+
+        <input
+            type="text"
+            name="ingredient"
+            placeholder="Ingredient 3"
+            required
+            class="form-control mb-3"
+        >
 
         <label class="subheading" for="cuisine">Choose a cuisine:</label>
-        <select name="cuisine" id="cuisine">
+        <select name="cuisine" id="cuisine" class="form-select mb-3">
             {% for cuisine in cuisines %}
                 <option value="{{ cuisine }}">
                     {{ cuisine }}
@@ -24,7 +41,7 @@
         </select>
 
         <label class="subheading" for="restrictions">Dietary Restrictions:</label>
-        <div class="checkbox-container">
+        <div class="checkbox-container mb-3">
             {% for restriction in dietary_restrictions %}
                 <div class="checkbox-group">
                     <label class="checkbox-label">
@@ -40,7 +57,7 @@
         </div>
 
         <label class="subheading" for="language">Choose a language:</label>
-        <select name="language" id="language">
+        <select name="language" id="language" class="form-select mb-3">
             {% for language in languages %}
                 <option value="{{ language }}">
                     {{ language }}
@@ -48,7 +65,12 @@
             {% endfor %}
         </select>
 
-        <input type="submit" value="Generate Recipe">
+        <input
+            type="submit"
+            value="Generate Recipe"
+            class="btn btn-primary w-100"
+        >
     </form>
-</body>
-</html>
+</div>
+
+{% endblock %}

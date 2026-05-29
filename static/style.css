@@ -5,9 +5,13 @@ body {
     padding: 0;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 10px;
+form {
+    max-width: 420px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
 .name {
@@ -15,23 +19,6 @@ h2 {
     font-size: 14px;
     color: #555;
     margin-bottom: 20px;
-}
-
-form {
-    max-width: 350px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-
-input[type="text"] {
-    width: 95%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
 .subheading {
@@ -42,21 +29,11 @@ input[type="text"] {
     margin-bottom: 8px;
 }
 
-select#cuisine {
-    width: 200px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
 .checkbox-container {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-    width: 95%;
-    margin-bottom: 10px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -71,47 +48,36 @@ select#cuisine {
 
 .checkbox-label {
     display: inline-block;
-    font-size: 13px;
-}
-
-select#language {
-    width: 200px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     font-size: 14px;
-    margin-bottom: 10px;
 }
 
-input[type="submit"] {
-    width: 100%;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-.recipe-page {
-    max-width: 900px;
-    margin: 50px auto;
-}
-
-.recipe-page h2 {
-    color: #35a853;
+.recipe-output {
     text-align: left;
-    border-bottom: 2px solid #35a853;
-    padding-bottom: 15px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-.recipe-box {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Mobile screen adjustment */
+@media screen and (max-width: 576px) {
+    form {
+        max-width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .checkbox-group {
+        flex: 0 0 50%;
+    }
+
+    .recipe-output {
+        font-size: 14px;
+        padding: 15px;
+    }
 }

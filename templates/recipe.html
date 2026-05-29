@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Generated Recipe</title>
-    <p class="name">Avidmaa 2022810096</p>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+{% extends "base.html" %}
 
-<body>
-    <div class="recipe-page">
-        <h2>Your Recipe:</h2>
+{% block content %}
 
-        <div class="recipe-box">
+<div id="root" class="container mt-4">
+    <div class="page-header">
+        <h2 class="alert alert-success text-center">Generated Recipe</h2>
+        <p class="name">Avidmaa 2022810096</p>
+
+        <div class="recipe-output">
             {{ recipe | safe }}
         </div>
 
-        <a href="/">Generate another recipe</a>
+        <a href="/" class="btn btn-link">Generate another recipe</a>
     </div>
-</body>
-</html>
+</div>
+
+{% endblock %}
